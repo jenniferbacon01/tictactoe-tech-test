@@ -21,10 +21,13 @@
 		this.board[moveIndex] = 2;
 	};
 
-	Game.prototype.checkForWins = function(){
+	Game.prototype.findCombinations = function(){
 		this.combinationCalculator.findCombinations(this.board);
 	};
 
+  Game.prototype.findWins = function() {
+    this.winFinder.findWins(this.findCombinations());
+  };
 
 	exports.Game = Game;
 
