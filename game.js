@@ -29,6 +29,13 @@
 		this.winFinder.findWins(this.findCombinations());
 	};
 
+	Game.prototype.checkIfGameIsOver = function(board = this.board){
+		board.forEach(function(square){
+			if (square === 0) return 'game not over';
+		});
+		return 'it\'s a draw';
+	};
+
 	exports.Game = Game;
 
 })(this);

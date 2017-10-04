@@ -24,4 +24,8 @@ describe('Game', function() {
     expect(game.board).to.eql([1, 2, 0, 0, 0, 0, 0, 0, 0]);
   });
 
+  it('tells you when the game is over when there is no winner', function() {
+    expect(game.checkIfGameIsOver([1, 2, 1, 1, 2, 2, 2, 1, 1])).to.equal("it's a draw");
+  });
+
 });
