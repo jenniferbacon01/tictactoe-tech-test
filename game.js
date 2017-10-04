@@ -25,9 +25,9 @@
 		this.combinationCalculator.findCombinations(this.board);
 	};
 
-  Game.prototype.findWins = function() {
-    this.winFinder.findWins(this.findCombinations());
-  };
+	Game.prototype.findWins = function() {
+		this.winFinder.findWins(this.findCombinations());
+	};
 
 	exports.Game = Game;
 
