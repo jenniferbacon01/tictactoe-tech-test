@@ -3,7 +3,7 @@ describe('Game', function() {
   var game;
 
   beforeEach(function() {
-    game = new Game();
+    game = new Game("jen","joe");
   });
 
   it('populates the board with 9 empty spaces', function() {
