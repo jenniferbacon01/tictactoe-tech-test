@@ -4,8 +4,7 @@
   "description": "",
   "main": "game.js",
   "scripts": {
-    "test": "nyc mocha",
-    "coverage": "istanbul cover ./test/gameTest.js"
+    "test": "nyc --reporter=text mocha"
   },
   "repository": {
     "type": "git",

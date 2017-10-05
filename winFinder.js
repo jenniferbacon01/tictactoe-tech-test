@@ -18,18 +18,14 @@
     if (combination[0] != combination[1] || combination[1]!=combination[2]){
       return 'no wins';
     }else{
-      return this.calculateWinnerFor3Matching(combination);
+      return calculateWinnerFor3Matching(combination);
     };
 	};
 
-  WinFinder.prototype.calculateWinnerFor3Matching = function (combination) {
-    if (combination[0]===1){
-      return 'player1 wins';
-    }else if (combination[0]===2) {
-      return 'player2 wins';
-    }else{
-      return 'no wins';
-    }
+  calculateWinnerFor3Matching = function (combination) {
+    if (combination[0]===1) return 'player1 wins';
+    if (combination[0]===2) return 'player2 wins';
+    if (combination[0]===0)  return 'no wins';
   };
 
 	exports.WinFinder = WinFinder;

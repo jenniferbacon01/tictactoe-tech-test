@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for tictactoe-tech-test/combinationCalculator.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">tictactoe-tech-test/</a> combinationCalculator.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.82% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>7/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">31.82% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>7/22</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function(exports){
+&nbsp;
+	var CombinationCalculator = <span class="fstat-no" title="function not covered" >function() {</span>
+	};
+&nbsp;
+	CombinationCalculator.prototype.findCombinations = <span class="fstat-no" title="function not covered" >function (board1dArray) {</span>
+<span class="cstat-no" title="statement not covered" >		return this.findRowCombinations(board1dArray).concat(this.findColumnCombinations(board1dArray)).concat(this.findDiagonalCombinations(board1dArray));</span>
+	};
+&nbsp;
+	CombinationCalculator.prototype.findRowCombinations = <span class="fstat-no" title="function not covered" >function (board1dArray) {</span>
+<span class="cstat-no" title="statement not covered" >		var rowCombinations = [];</span>
+<span class="cstat-no" title="statement not covered" >		rowCombinations.push([board1dArray[0], board1dArray[1], board1dArray[2]]);</span>
+<span class="cstat-no" title="statement not covered" >		rowCombinations.push([board1dArray[3], board1dArray[4], board1dArray[5]]);</span>
+<span class="cstat-no" title="statement not covered" >		rowCombinations.push([board1dArray[6], board1dArray[7], board1dArray[8]]);</span>
+<span class="cstat-no" title="statement not covered" >		return rowCombinations;</span>
+	};
+&nbsp;
+	CombinationCalculator.prototype.findColumnCombinations = <span class="fstat-no" title="function not covered" >function (board1dArray) {</span>
+<span class="cstat-no" title="statement not covered" >		var columnCombinations = [];</span>
+<span class="cstat-no" title="statement not covered" >		columnCombinations.push([board1dArray[0], board1dArray[3], board1dArray[6]]);</span>
+<span class="cstat-no" title="statement not covered" >		columnCombinations.push([board1dArray[1], board1dArray[4], board1dArray[7]]);</span>
+<span class="cstat-no" title="statement not covered" >		columnCombinations.push([board1dArray[2], board1dArray[5], board1dArray[8]]);</span>
+<span class="cstat-no" title="statement not covered" >		return columnCombinations;</span>
+	};
+&nbsp;
+	CombinationCalculator.prototype.findDiagonalCombinations = <span class="fstat-no" title="function not covered" >function (board1dArray) {</span>
+<span class="cstat-no" title="statement not covered" >		var diagonalCombinations = [];</span>
+<span class="cstat-no" title="statement not covered" >		diagonalCombinations.push([board1dArray[0], board1dArray[4], board1dArray[8]]);</span>
+<span class="cstat-no" title="statement not covered" >		diagonalCombinations.push([board1dArray[2], board1dArray[4], board1dArray[6]]);</span>
+<span class="cstat-no" title="statement not covered" >		return diagonalCombinations;</span>
+	};
+&nbsp;
+	exports.CombinationCalculator = CombinationCalculator;
+})(this);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Oct 05 2017 12:02:43 GMT+0100 (BST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

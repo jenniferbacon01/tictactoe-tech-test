@@ -1,39 +1,35 @@
 (function(exports){
 
-	var Game = function(player1, player2, combinationCalculator = new CombinationCalculator) {
-		this.board = [];
-		this.player1 = player1;
-		this.player2 = player2;
+	var Game = function(combinationCalculator = new CombinationCalculator, winFinder = new WinFinder) {
+		this.board1dArray = [];
 		this.combinationCalculator = combinationCalculator;
+    this.winFinder = winFinder;
 	};
 
 	Game.prototype.start = function() {
 		for (var i = 0; i < 9; i++){
-			this.board.push(0);
+			this.board1dArray.push(0);
 		}
 	};
 
-	Game.prototype.player1Move = function(moveIndex) {
-		this.board[moveIndex] = 1;
+	Game.prototype.move = function(player, moveIndex, board1dArray = this.board1dArray) {
+		player.move(moveIndex, board1dArray);
 	};
 
-	Game.prototype.player2Move = function(moveIndex) {
-		this.board[moveIndex] = 2;
+	Game.prototype.findCombinations = function(board1dArray = this.board1dArray){
+		return this.combinationCalculator.findCombinations(board1dArray);
 	};
 
-	Game.prototype.findCombinations = function(){
-		this.combinationCalculator.findCombinations(this.board);
+	Game.prototype.findWins = function(combinations = this.findCombinations()) {
+		return this.winFinder.findWins(combinations);
 	};
 
-	Game.prototype.findWins = function() {
-		this.winFinder.findWins(this.findCombinations());
-	};
-
-	Game.prototype.checkIfGameIsOver = function(board = this.board){
-		board.forEach(function(square){
-			if (square === 0) return 'game not over';
+	Game.prototype.checkIfGameIsOver = function(board1dArray = this.board1dArray){
+		var outcome = 'it\'s a draw'
+		board1dArray.forEach(function(square){
+			if (square === 0) outcome = 'game not over';
 		});
-		return 'it\'s a draw';
+		return outcome;
 	};
 
 	exports.Game = Game;
